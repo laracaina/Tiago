@@ -1,6 +1,5 @@
-#ifndef INTERFAZ_H_INCLUDED
-#define INTERFAZ_H_INCLUDED
 #include <iostream>
+#include "rlutil.h"
 using namespace std;
 
 void menuCuadrado(int pos){
@@ -62,5 +61,3 @@ void recuadroChico(int pos , int pos1 , int pos2 , int pos3 , int pos4){ ///pos 
     gotoxy(pos4,pos3);
     cout<<(char)188;
 }
-
-#endif // INTERFAZ_H_INCLUDED

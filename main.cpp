@@ -1,14 +1,10 @@
 #include <iostream>
-#include <cstring>
-#include <cstdio>
-#include <cstdlib>
 #include "clasesYfunciones/rlutil.h"
-#include "clasesYfunciones/Fecha.h"
-#include "clasesYfunciones/Ventas.h"
-#include "clasesYfunciones/Clientes.h"
-#include "clasesYfunciones/Empleados.h"
 #include "clasesYfunciones/Interfaz.h"
-#include "clasesYfunciones/Productos.h"
+#include "clasesYfunciones/Venta.h"
+#include "clasesYfunciones/Cliente.h"
+#include "clasesYfunciones/Producto.h"
+#include "clasesYfunciones/Empleado.h"
 using namespace std;
 
 
@@ -72,28 +68,28 @@ int main()
          system("cls");
         switch(opc){
             case 1:
-                listarProductos();
+                Producto::listarProductos();
                 break;
             case 2:
-                agregarProductos();
+                Producto::agregarProductos();
                 break;
             case 3:
-                 listarProductosVeganos();
+                 Producto::listarProductosVeganos();
                 break;
             case 4:
-                listarProductosSinTACC();
+                Producto::listarProductosSinTACC();
                 break;
             case 5:
-                productosEconomicos();
+                Producto::productosEconomicos();
                 break;
             case 6:
-                listarProductosEnStock();
+                Producto::listarProductosEnStock();
                 break;
             case 7:
-                buscarProductoID();
+                Producto::buscarProductoID();
                 break;
             case 8:
-                  eliminarProducto();
+                  Producto::eliminarProducto();
                 break;
             case 0:
                 break;
@@ -128,25 +124,25 @@ int main()
          system("cls");
         switch(opc){
             case 1:
-               listarEmpleados();
+               Empleado::listarEmpleados();
                 break;
             case 2:
-               agregarEmpleados();
+               Empleado::agregarEmpleados();
                 break;
             case 3:
-              empleadoTurno();
+              Empleado::empleadoTurno();
                 break;
             case 4:
-               empleadoGenero();
+               Empleado::empleadoGenero();
                 break;
             case 5:
-                 cambiarSueldo();
+                 Empleado::cambiarSueldo();
                 break;
             case 6:
-                buscarEmpleadosID();
+                Empleado::buscarEmpleadosID();
                 break;
             case 7:
-                 eliminarEmpleados();
+                 Empleado::eliminarEmpleados();
                 break;
             case 0:
                 break;
@@ -175,24 +171,24 @@ int main()
          system("cls");
         switch(opc){
             case 1:
-                listarVentas();
+                Venta::listarVentas();
                 break;
             case 2:
-                if(validacionVentas() == false){
+                if(Venta::validacionVentas() == false){
                     recuadroChico(30 , 12 , 13 , 16 , 89);
                 gotoxy(33,14);
                 rlutil::setColor(15);
                     cout<<"PRIMERO HAY QUE CAGRAR PRODUCTOS, EMPLEADOS Y CLIENTES"<<endl;
                 }else{
 
-                agregarVentas();
+                Venta::agregarVentas();
                 }
                 break;
             case 3:
                 //ventasPorMes();
                 break;
             case 4:
-                empleadoVentas();
+                Empleado::empleadoVentas();
                 break;
 
             case 0:
@@ -223,19 +219,19 @@ int main()
                 system("cls");
                 switch(opc){
             case 1:
-                 listarClientes();
+                 Cliente::listarClientes();
                 break;
             case 2:
-                 agregarClientes();
+                 Cliente::agregarClientes();
                 break;
             case 3:
-                 clientesSocios();
+                 Cliente::clientesSocios();
                 break;
             case 4:
-                buscarClienteID();
+                Cliente::buscarClienteID();
                 break;
             case 5:
-                 eliminarCliente();
+                 Cliente::eliminarCliente();
                 break;
             case 0:
                 break;
@@ -265,16 +261,16 @@ int main()
          system("cls");
         switch(opc){
             case 1:
-                 backUpProductos();
+                 Producto::backUpProductos();
                 break;
             case 2:
-               backUpEmpleados();
+               Empleado::backUpEmpleados();
                 break;
             case 3:
-                backUpClientes();
+                Cliente::backUpClientes();
                 break;
             case 4:
-                 backUpVentas();
+                 Venta::backUpVentas();
                 break;
 
 
